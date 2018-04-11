@@ -1,0 +1,58 @@
+Ren'py notes
+
+Esc double quotes \" quote  \"
+
+Define (Have to befor the label start)
+  Character
+  # define ref = Character('DisplayedName', color="#c8ffc8")
+  # ref "Displaying example testing Renpy notes"
+
+Images:Background (Have to befor the label start)
+  defining background
+  # image bg background = "bg_background.jpg"
+  using the background
+  # scene bg background
+
+Images:Characters (Have to befor the label start)
+  # image refChar variant_one = "var_one.jpeg"
+  # image refChar variant_one = "var_two.jpg"
+Using the variant of the refChar
+  # show variant_one
+Using the variant of the refChar since the first part of the deffinition is
+the same it will not show them on top of each other but remove the first showen
+variant then display the second one.
+  # show variant_two
+
+Label: markers where you can use the goto with the #jump statement Labels may
+be defined in any file that is in the game directory, and ends with .rpy.
+The filename doesn't matter to Ren'Py, only the labels contained inside it.
+You can think of all the .rpy files as being equivalent to a single big .rpy
+file, with jumps used to transfer control. This gives you flexibility in how
+you organize the script of a larger game.
+  # label option_one
+  # label option_two
+  # label option_tree
+
+Jump: goto command to go to the specified #label
+  # jump option_one
+  # jump option_two
+  # jump option_tree
+
+Menu: a select one menu to the player to use when offered a choise. Indenting
+and " : " is mandatory. It will go lineary so if it is jumps to option_two and
+do not have any jumping forward then it will go to the next option.
+  # menu:
+        # "Option one":
+          # jump option_one
+        # "Option two":
+          # jump option_two
+        # "Option tree":
+          # jump option_tree
+
+Default: flag for variables.
+  # default boolean = False
+  # $ boolean = True
+  # if boolean:
+    # "The boolean variable was true"
+  # else:
+    # "The boolean variable was false"
