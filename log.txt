@@ -1,4 +1,4 @@
-Wed Apr 11 19:00:19 2018
+Thu Apr 12 08:20:03 2018
 Linux-4.13.0-38-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.14.3.3347
  
@@ -11,9 +11,13 @@ Loading script took 0.10s
 Loading save slot metadata. took 0.00s
 Loading persistent took 0.00s
 
-File "game/script.rpy", line 49: expected ':' not found.
-    else boolean:
-         ^
+File "game/script.rpy", line 71: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    jump option_tree_label
+    ^
+
+File "game/script.rpy", line 74: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    jump option_tree_label
+    ^
 DPI scale factor: 1.000000
 Interface start took 0.07s
 
@@ -279,13 +283,13 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 0.400695085526s
+Total time until interface ready: 0.422176837921s
 Resetting cache.
-Bootstrap to the start of init.init took 20.87s
+Bootstrap to the start of init.init took 22.52s
 Early init took 0.00s
 Loader init took 0.01s
 Loading error handling took 0.02s
-Loading script took 0.06s
+Loading script took 0.07s
 Loading save slot metadata. took 0.00s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -305,7 +309,7 @@ Init translation took 0.03s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
-Save screen analysis took 0.05s
+Save screen analysis took 0.06s
 Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.03s
@@ -575,18 +579,18 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 21.3910880089s
+Total time until interface ready: 23.0630099773s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.003469 seconds.
-- Frame drawn at 0.005588 seconds.
-- Frame drawn at 0.013608 seconds.
-- Frame drawn at 0.029764 seconds.
-- 0.029764 seconds to render 5 frames.
+- Frame drawn at 0.003208 seconds.
+- Frame drawn at 0.005393 seconds.
+- Frame drawn at 0.007251 seconds.
+- Frame drawn at 0.015865 seconds.
+- 0.015865 seconds to render 5 frames.
 Cleaning stores took 0.00s
-Init translation took 0.14s
+Init translation took 0.16s
 Build styles took 0.01s
-Load screen analysis took 0.01s
+Load screen analysis took 0.02s
 Analyze screens took 0.00s
 Prepare screens took 0.00s
 Running _start took 0.00s

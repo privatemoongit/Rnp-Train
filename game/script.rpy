@@ -1,52 +1,79 @@
-#RenpyNotes 07
 define tm = Character("refChar", color="c8ffc8")
-#RenpyNotes 12
 image bg background = "bg_background.jpg"
-#RenpyNotes 17
 image refChar var_one= "var_one.jpeg"
-#RenpyNotes 18
 image refChar var_two= "var_two.jpg"
 
 label start:
-    #RenpyNotes 14
-    scene bg background
-    #RenpyNotes 24
-    show refChar var_two
 
-    #RenpyNotes 08
-    tm "Line of the test male"
-    #RenpyNotes 20
-    show refChar var_one
-    #RenpyNotes 53
-    default boolean = False
-    #RenpyNotes 44
+    default numbers = ["one","two","tree","four","five","seven"]
+    $ boolean = False
+
+    scene bg room
+
     menu:
-        "Option one":
-            #RenpyNotes 46
-            jump option_one
-        "Option two":
-            #RenpyNotes 48
-            jump option_two
-        "Option tree":
-            #RenpyNotes 54
-            $ boolean = True
-            #RenpyNotes 50
-            jump option_tree
-    #RenpyNotes 32
-    label option_one:
-    "Chosed option one jumping to option tree"
-    #RenpyNotes 50
-    jump option_tree
-    #RenpyNotes 32
-    label option_two:
+        "display characters":
+            jump option_one_label
+        "jump to screen tests":
+            jump option_two_label
+        "More options: if":
+            jump option_tree_label
+
+    label option_one_label:
     "Option two was chosen"
-    #RenpyNotes 33
-    label option_tree:
-    "The third option"
-    #RenpyNotes 55
+    scene bg background
+    show refChar var_two
+    tm "Line of the test male"
+    show refChar var_one
+    jump ending
+
+    label option_two_label:
+    #screens stored in the custom screens.rpy
+    menu:
+        "hbox_screen":
+            jump hbox_screen_label
+        "hbox_screen_param":
+            jump hbox_screen_param_label
+        "hbox_screen_param_with_default":
+            jump hbox_screen_param_with_default_label
+
+    label hbox_screen_label:
+    show screen hbox_screen
+    jump ending
+
+    label hbox_screen_param_label:
+    show screen hbox_screen_param(numbers)
+    jump ending
+
+    label hbox_screen_param_with_default_label:
+    show screen hbox_screen_param_with_default
+    jump ending
+
+
+    label option_tree_label:
+    menu:
+        "Set boolean true":
+            $ boolean = True
+            jump check_boolean_label
+        "Set boolean false":
+            $ boolean = False
+            jump check_boolean_label
+
+    label check_boolean_label:
+    menu:
+        "Check boolean value":
+            jump boolean_label
+        "Finish boolean testing":
+            jump ending
+
+    label boolean_label:
     if boolean:
         "boolean is true"
+        jump option_tree_label
     else:
         "boolean is false"
+        jump option_tree_label
+
+
+    label ending:
     "Placeholder line befor the game ends"
     return

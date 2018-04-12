@@ -2,6 +2,8 @@ Ren'py notes
 
 Esc double quotes \" quote  \"
 
+SCREEN != SCENE
+
 Define (Have to befor the label start)
   Character
   # define ref = Character('DisplayedName', color="#c8ffc8")
@@ -48,11 +50,3 @@ do not have any jumping forward then it will go to the next option.
           # jump option_two
         # "Option tree":
           # jump option_tree
-
-Default: flag for variables.
-  # default boolean = False
-  # $ boolean = True
-  # if boolean:
-    # "The boolean variable was true"
-  # else:
-    # "The boolean variable was false"
