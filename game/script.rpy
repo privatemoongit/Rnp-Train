@@ -5,7 +5,7 @@ image refChar var_two= "var_two.jpg"
 
 label start:
 
-    default numbers = ["one","two","tree","four","five","six","seven"]
+    default numbers = ["one","two","tree","four","five","six"]
     $ boolean = False
 
     scene bg room
@@ -58,9 +58,8 @@ label start:
     jump ending
 
     label grid_screen_param_label:
-    show screen grid_screen_param
+    show screen grid_screen_param(numbers)
     pause
-    hide screen grid_screen_param
     jump ending
 
 

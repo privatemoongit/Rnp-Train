@@ -27,12 +27,10 @@ screen vbox_screen_param(buttons, size_text=50):
                 action Null
                 text_size size_text
 
-screen grid_screen_param(buttons=["Default_one", "Default_two"], text_size=45):
-    grid 2 len(buttons)/2+1:
+screen grid_screen_param(buttons, text_size=45):
+    grid 2 len(buttons)/2:
         style "grid_screen_param_style"
         for button in buttons:
             textbutton button:
                 action Null
                 text_size text_size
-        for i in range (0, len(buttons)/2 + 1)*2 - len(buttons)):
-            null

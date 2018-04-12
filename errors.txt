@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/custon_screens.rpy", line 31: u'grind' is not a keyword argument or valid child for the screen statement.
-    grind 2 len(buttons)/2+1:
-         ^
+File "game/script.rpy", line 63: end of line expected.
+    hide screen grid_screen_param(numbers)
+                                 ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Thu Apr 12 19:27:50 2018
+Thu Apr 12 19:35:48 2018

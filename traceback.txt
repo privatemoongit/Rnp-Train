@@ -1,52 +1,62 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/custon_screens.rpy", line 30, in analyze_screen
-    screen grid_screen_param(buttons=["Default_one", "Default_two"], text_size=45):
-  File "game/custon_screens.rpy", line 30, in analyze
-    screen grid_screen_param(buttons=["Default_one", "Default_two"], text_size=45):
-  File "game/custon_screens.rpy", line 30, in analyze
-    screen grid_screen_param(buttons=["Default_one", "Default_two"], text_size=45):
-  File "game/custon_screens.rpy", line 31, in analyze
-    grid 2 len(buttons)/2+1:
-  File "game/custon_screens.rpy", line 31, in analyze
-    grid 2 len(buttons)/2+1:
-  File "game/custon_screens.rpy", line 37, in analyze
-    for i in range (0, len(buttons)/2 + 1)*2 - len(buttons)):
-SyntaxError: unexpected EOF while parsing (custon_screens.rpy, line 37)
+While running game code:
+  File "game/script.rpy", line 62, in script
+    pause
+  File "renpy/common/000statements.rpy", line 416, in execute_pause
+    renpy.pause()
+Exception: Grid not completely full.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/bootstrap.py", line 306, in bootstrap
-    renpy.main.main()
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/main.py", line 513, in main
-    run(restart)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/main.py", line 82, in run
-    renpy.display.screen.analyze_screens()
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 870, in analyze_screens
-    s.ast.analyze_screen()
-  File "game/custon_screens.rpy", line 30, in analyze_screen
-    screen grid_screen_param(buttons=["Default_one", "Default_two"], text_size=45):
-  File "game/custon_screens.rpy", line 30, in analyze
-    screen grid_screen_param(buttons=["Default_one", "Default_two"], text_size=45):
-  File "game/custon_screens.rpy", line 30, in analyze
-    screen grid_screen_param(buttons=["Default_one", "Default_two"], text_size=45):
-  File "game/custon_screens.rpy", line 31, in analyze
-    grid 2 len(buttons)/2+1:
-  File "game/custon_screens.rpy", line 31, in analyze
-    grid 2 len(buttons)/2+1:
-  File "game/custon_screens.rpy", line 37, in analyze
-    for i in range (0, len(buttons)/2 + 1)*2 - len(buttons)):
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/pyanalysis.py", line 529, in is_constant_expr
-    node, literal = ccache.ast_eval_literal(expr)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/pyanalysis.py", line 683, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/python.py", line 674, in py_compile
-    raise e
-SyntaxError: unexpected EOF while parsing (custon_screens.rpy, line 37)
+  File "game/script.rpy", line 62, in script
+    pause
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ast.py", line 1828, in execute
+    self.call("execute")
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ast.py", line 1816, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/statements.py", line 177, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 416, in execute_pause
+    renpy.pause()
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/exports.py", line 1311, in pause
+    rv = renpy.ui.interact(mouse='pause', type='pause', roll_forward=roll_forward)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 2635, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 3118, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 2041, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 485, in renpy.display.render.render_screen
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 717, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 145, in renpy.display.render.render
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 717, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 145, in renpy.display.render.render
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 717, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 145, in renpy.display.render.render
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 661, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 145, in renpy.display.render.render
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 717, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 145, in renpy.display.render.render
+  File "render.pyx", line 233, in renpy.display.render.render
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 427, in render
+    raise Exception("Grid not completely full.")
+Exception: Grid not completely full.
 
 Linux-4.13.0-38-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.14.3.3347
 RenpyTest 1.0
-Thu Apr 12 19:29:31 2018
+Thu Apr 12 21:14:02 2018
