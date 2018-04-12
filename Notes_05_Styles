@@ -1,0 +1,8 @@
+Style is used to decorate varius objects what have the capability to use them.
+For exampl screesn. It can determine varius factors about the objects using
+them.
+
+# style centered_style:
+        # xalign 0.5
+        # yalign 0.5
+        # spacing 5

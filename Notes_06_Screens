@@ -1,0 +1,23 @@
+
+Screens can be used do display custom UI elements. They function as a type
+of method. They can be used as no parameter with parameter and with Default
+parameter if there is no parameter provided. They can use styles. Styles
+for better organizing should be keept in seprate file.
+
+#screen hbox_screen:
+    #hbox:
+        #style "centered_style"
+        #textbutton "One"
+        #textbutton "Two"
+
+#screen hbox_screen_param(buttons):
+    #hbox:
+        #style "centered_style"
+        #for button in buttons:
+            #textbutton button
+
+#screen hbox_screen_param_with_default(buttons=["DefaultValue"]):
+    #hbox:
+        #style "centered_style"
+        #for button in buttons:
+            #textbutton button

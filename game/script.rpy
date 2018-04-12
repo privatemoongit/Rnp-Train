@@ -5,7 +5,7 @@ image refChar var_two= "var_two.jpg"
 
 label start:
 
-    default numbers = ["one","two","tree","four","five","seven"]
+    default numbers = ["one","two","tree","four","five","six","seven"]
     $ boolean = False
 
     scene bg room
@@ -29,23 +29,38 @@ label start:
     label option_two_label:
     #screens stored in the custom screens.rpy
     menu:
-        "hbox_screen":
-            jump hbox_screen_label
+        "vbox_screen_param":
+            jump vbox_screen_param_label
         "hbox_screen_param":
             jump hbox_screen_param_label
         "hbox_screen_param_with_default":
             jump hbox_screen_param_with_default_label
+        "grid_screen_param":
+            jump grid_screen_param_label
 
-    label hbox_screen_label:
-    show screen hbox_screen
+    label vbox_screen_param_label:
+    show screen vbox_screen_param(numbers)
+    pause
+    hide screen vbox_screen_param
+    pause
     jump ending
 
     label hbox_screen_param_label:
     show screen hbox_screen_param(numbers)
+    pause
+    hide screen hbox_screen_param
     jump ending
 
     label hbox_screen_param_with_default_label:
     show screen hbox_screen_param_with_default
+    pause
+    hide screen hbox_screen_param_with_default
+    jump ending
+
+    label grid_screen_param_label:
+    show screen grid_screen_param
+    pause
+    hide screen grid_screen_param
     jump ending
 
 

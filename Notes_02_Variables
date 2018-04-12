@@ -2,13 +2,3 @@ Defining a python variable:all tree options works
   Default variableName
   $ variableName
   $variableName
-
-Default or $ : flag for variables.
-  # default boolean = False
-  # $ boolean = True
-  # if boolean:
-    # "The boolean variable was true"
-  # else:
-    # "The boolean variable was false"
-
-Customo screen: making a custom screen to show.

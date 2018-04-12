@@ -1,6 +1,8 @@
-TODO
-  Notes_02_Variables
-  Describe if
-  Notes_4 screens
-TOBECON
-  Custom screens and styles part 1.mp4 6:34.
+
+Exampl of the if statement
+  # default boolean = False
+  # $ boolean = True
+  # if boolean:
+    # "The boolean variable was true"
+  # else:
+    # "The boolean variable was false"
