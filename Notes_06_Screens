@@ -21,3 +21,35 @@ for better organizing should be keept in seprate file.
         #style "centered_style"
         #for button in buttons:
             #textbutton button
+
+#screen vbox_screen_param(buttons, size_text=50):
+    #vbox:
+        #style "vbox_style"
+        #for button in buttons:
+            #textbutton button:
+                #action Null
+                #text_size size_text
+Grid: HAS TO BE FILLED!
+#screen grid_screen_param(buttons, text_size=45):
+    #grid 2 len(buttons)/2:
+        #style "grid_screen_param_style"
+        #for button in buttons:
+            #textbutton button:
+                #action Null
+                #text_size text_size
+
+Combo screens: you can essentialy put any container object to any other
+container object (wraping).
+#screen combo_screen:
+    #style_prefix "combo"
+    #hbox:
+        #vbox:
+            #yalign 0.5
+            #text "one"
+            #text "one"
+            #text "one"
+        #vbox:
+            #text "one"
+            #text "one"
+            #text "one"
+            #text "one"

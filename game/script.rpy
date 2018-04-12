@@ -7,7 +7,7 @@ label start:
 
     default numbers = ["one","two","tree","four","five","six"]
     $ boolean = False
-
+    define total = 0
     scene bg room
 
     menu:
@@ -37,6 +37,8 @@ label start:
             jump hbox_screen_param_with_default_label
         "grid_screen_param":
             jump grid_screen_param_label
+        "combo_screen":
+            jump combo_screen_label
 
     label vbox_screen_param_label:
     show screen vbox_screen_param(numbers)
@@ -62,6 +64,10 @@ label start:
     pause
     jump ending
 
+    label combo_screen_label:
+    show screen combo_screen
+    pause
+    jump ending
 
     label option_tree_label:
     menu:

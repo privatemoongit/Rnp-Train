@@ -6,3 +6,26 @@ them.
         # xalign 0.5
         # yalign 0.5
         # spacing 5
+Style is some other style means you will inherit the other style
+  #style grid_screen_param_style is vbox_style:
+
+Style prefix: everthign under it will get the matching style if there is any.
+
+#style combo_text:
+    #size 50
+
+#style combo_hbox is centered_style
+
+#screen combo_screen:
+    #style_prefix "combo"
+    #hbox:
+        #vbox:
+            #yalign 0.5
+            #text "one"
+            #text "one"
+            #text "one"
+        #vbox:
+            #text "one"
+            #text "one"
+            #text "one"
+            #text "one"

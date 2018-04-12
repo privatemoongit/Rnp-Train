@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 63: end of line expected.
-    hide screen grid_screen_param(numbers)
-                                 ^
+File "game/script.rpy", line 10: expected '=' not found.
+    define total
+                ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Thu Apr 12 19:35:48 2018
+Thu Apr 12 22:20:17 2018

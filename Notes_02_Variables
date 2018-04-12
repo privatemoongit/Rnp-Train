@@ -2,3 +2,4 @@ Defining a python variable:all tree options works
   Default variableName
   $ variableName
   $variableName
+  These are global variables importable by the global keyword.

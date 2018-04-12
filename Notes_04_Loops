@@ -1,3 +1,7 @@
+For
+  #for i in rang(0, x):
+    #dostuff
+
 For each statement
   #for object in objects:
       #textbutton object

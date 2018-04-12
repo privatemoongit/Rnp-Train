@@ -1,4 +1,4 @@
-Thu Apr 12 21:13:55 2018
+Thu Apr 12 22:25:05 2018
 Linux-4.13.0-38-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.14.3.3347
  
@@ -7,11 +7,11 @@ Bootstrap to the start of init.init took 0.06s
 Early init took 0.00s
 Loader init took 0.01s
 Loading error handling took 0.02s
-Loading script took 0.20s
-Loading save slot metadata. took 0.00s
+Loading script took 0.08s
+Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
+Running init code took 0.04s
 Loading analysis data took 0.03s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
@@ -19,9 +19,9 @@ Backing up script files to '/home/gkiss/.renpy/backups/RenpyTest':
 Dump and make backups. took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.02s
+Initial gc. took 0.01s
 DPI scale factor: 1.000000
-Creating interface object took 0.03s
+Creating interface object took 0.05s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
@@ -30,7 +30,7 @@ Analyze screens took 0.01s
 Save screen analysis took 0.06s
 Prepare screens took 0.05s
 Save pyanalysis. took 0.06s
-Save bytecode. took 0.04s
+Save bytecode. took 0.05s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.02s
@@ -297,17 +297,17 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 0.893712043762s
+Total time until interface ready: 0.819547891617s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.008754 seconds.
-- Frame drawn at 0.023721 seconds.
-- Frame drawn at 0.040324 seconds.
-- Frame drawn at 0.057470 seconds.
-- 0.057470 seconds to render 5 frames.
+- Frame drawn at 0.004581 seconds.
+- Frame drawn at 0.007256 seconds.
+- Frame drawn at 0.024373 seconds.
+- Frame drawn at 0.040609 seconds.
+- 0.040609 seconds to render 5 frames.
 
 Full traceback:
-  File "game/script.rpy", line 62, in script
+  File "game/script.rpy", line 69, in script
     pause
   File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ast.py", line 1828, in execute
     self.call("execute")
@@ -323,49 +323,58 @@ Full traceback:
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 2635, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 3118, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 2041, in draw_screen
-    renpy.config.screen_height,
-  File "render.pyx", line 485, in renpy.display.render.render_screen
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 717, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 145, in renpy.display.render.render
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 717, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 145, in renpy.display.render.render
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 717, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 145, in renpy.display.render.render
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 661, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 145, in renpy.display.render.render
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 717, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 145, in renpy.display.render.render
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 427, in render
-    raise Exception("Grid not completely full.")
-Exception: Grid not completely full.
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 3019, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 420, in visit_all
+    callback(self)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 3019, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 430, in per_interact
+    self.update()
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 611, in update
+    self.screen.function(**self.scope)
+  File "game/custon_screens.rpy", line 38, in execute
+    screen combo_screen:
+  File "game/custon_screens.rpy", line 38, in execute
+    screen combo_screen:
+  File "game/custon_screens.rpy", line 40, in execute
+    hbox:
+  File "game/custon_screens.rpy", line 52, in execute
+    imagebutton auto "button_%s.png":
+  File "game/custon_screens.rpy", line 52, in keywords
+    imagebutton auto "button_%s.png":
+  File "<screen language>", line 53, in <module>
+NameError: name 'Selected' is not defined
 
 While running game code:
-  File "game/script.rpy", line 62, in script
+  File "game/script.rpy", line 69, in script
     pause
   File "renpy/common/000statements.rpy", line 416, in execute_pause
     renpy.pause()
-Exception: Grid not completely full.
+  File "game/custon_screens.rpy", line 38, in execute
+    screen combo_screen:
+  File "game/custon_screens.rpy", line 38, in execute
+    screen combo_screen:
+  File "game/custon_screens.rpy", line 40, in execute
+    hbox:
+  File "game/custon_screens.rpy", line 52, in execute
+    imagebutton auto "button_%s.png":
+  File "game/custon_screens.rpy", line 52, in keywords
+    imagebutton auto "button_%s.png":
+NameError: name 'Selected' is not defined
 Resetting cache.
-Bootstrap to the start of init.init took 75.56s
+Bootstrap to the start of init.init took 46.00s
 Early init took 0.00s
 Loader init took 0.01s
 Loading error handling took 0.02s
-Loading script took 0.06s
-Loading save slot metadata. took 0.00s
+Loading script took 0.07s
+Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.02s
@@ -373,7 +382,7 @@ Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Backing up script files to '/home/gkiss/.renpy/backups/RenpyTest':
-Dump and make backups. took 0.04s
+Dump and make backups. took 0.05s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.03s
@@ -654,16 +663,16 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 76.1588079929s
+Total time until interface ready: 46.6267838478s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.001557 seconds.
-- Frame drawn at 0.003034 seconds.
-- Frame drawn at 0.011580 seconds.
-- Frame drawn at 0.028690 seconds.
-- 0.028690 seconds to render 5 frames.
+- Frame drawn at 0.001441 seconds.
+- Frame drawn at 0.002800 seconds.
+- Frame drawn at 0.006244 seconds.
+- Frame drawn at 0.010490 seconds.
+- 0.010490 seconds to render 5 frames.
 Cleaning stores took 0.00s
-Init translation took 0.17s
+Init translation took 0.16s
 Build styles took 0.01s
 Load screen analysis took 0.02s
 Analyze screens took 0.00s
@@ -672,6 +681,13 @@ Running _start took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.17s
 Build styles took 0.01s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.17s
+Build styles took 0.02s
 Load screen analysis took 0.01s
 Analyze screens took 0.00s
 Prepare screens took 0.00s

@@ -34,3 +34,20 @@ screen grid_screen_param(buttons, text_size=45):
             textbutton button:
                 action Null
                 text_size text_size
+
+screen combo_screen:
+    style_prefix "combo"
+    hbox:
+        vbox:
+            yalign 0.5
+            text "one"
+            text "one"
+            text "one"
+        vbox:
+            text "one"
+            text "one"
+            text "one"
+            text "one"
+        text "Total: [total]"
+        imagebutton auto "button_%s.png":
+            action [Function(incrementTotal), SelectedIf(total % 2 ==1)]
