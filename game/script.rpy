@@ -95,5 +95,9 @@ label start:
 
 
     label ending:
-    "Placeholder line befor the game ends"
+    menu:
+        "Go to the begin of the scene":
+            jump start
+        "End the game":
+            "Ending the game"
     return

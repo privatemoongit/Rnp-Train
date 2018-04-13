@@ -1,0 +1,8 @@
+Define a button to click: you can define a button. Auto means you have to
+define 4 images for the button and it will use them automaticly:
+buttonname_idle.png, buttonname_.hover.png,
+buttonname_selected_hover.png, buttonname_selected_idle.png.
+Then after the auto statement "button_name_ % s "
+Then define the action what will happen after you use the button.
+#imagebutton auto "button_%s.png":
+    #action [Function(incrementTotal), SelectedIf(total % 2 ==1)]

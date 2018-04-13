@@ -1,0 +1,17 @@
+Init python functions. You can attach them to objects with the ability to use
+actions.
+For exampl:
+
+Define a global variable
+#define total = 0
+
+Init python function using the variable
+#init python:
+    #def incrementTotal():
+        #global total
+        #total+=1
+
+Define the object what is able to use action
+#imagebutton auto "button_%s.png":
+Use the function
+    #action [Function(incrementTotal)]

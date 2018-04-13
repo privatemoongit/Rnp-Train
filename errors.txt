@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 10: expected '=' not found.
-    define total
-                ^
+File "game/script.rpy", line 99: choice menuitem expects a non-empty block.
+    "Go to the begin of the scene":
+                                   ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Thu Apr 12 22:20:17 2018
+Fri Apr 13 07:09:23 2018
