@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 99: choice menuitem expects a non-empty block.
-    "Go to the begin of the scene":
-                                   ^
+File "game/basic_screen_concepts.rpy", line 9: u'style' is not a keyword argument or valid child for the screen statement.
+    style "combo_text"
+         ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Fri Apr 13 07:09:23 2018
+Fri Apr 13 07:49:20 2018

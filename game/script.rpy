@@ -13,10 +13,12 @@ label start:
     menu:
         "display characters":
             jump option_one_label
-        "jump to screen tests":
-            jump option_two_label
         "More options: if":
             jump option_tree_label
+        "jump to screen tests":
+            jump option_two_label
+        "jump to screen_ tests and concept":
+            jump option_screens_concepts_label
 
     label option_one_label:
     "Option two was chosen"
@@ -66,6 +68,23 @@ label start:
 
     label combo_screen_label:
     show screen combo_screen
+    pause
+    jump ending
+
+    label option_screens_concepts_label:
+    menu:
+        "Basic concept":
+            jump basic_screen_label
+        "Basic not to do":
+            jump not_to_do_screen_label
+
+    label basic_screen_label:
+    show basic_screen
+    pause
+    jump ending
+
+    label not_to_do_screen_label:
+    show not_to_do_screen
     pause
     jump ending
 
