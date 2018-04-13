@@ -1,71 +1,61 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 83, in script
+  File "game/interactive_scene/interactive_screen.rpy", line 6, in script
     pause
-  File "renpy/common/000statements.rpy", line 416, in execute_pause
-    renpy.pause()
-  File "game/basic_screen_concepts.rpy", line 3, in execute
-    screen basic_screen:
-  File "game/basic_screen_concepts.rpy", line 3, in execute
-    screen basic_screen:
-  File "game/basic_screen_concepts.rpy", line 5, in execute
-    hbox:
-  File "game/basic_screen_concepts.rpy", line 9, in execute
-    textbutton "Increment variable" :
-  File "game/basic_screen_concepts.rpy", line 9, in keywords
-    textbutton "Increment variable" :
-TypeError: SetVariable() got an unexpected keyword argument 'hovered'
+  File "game/interactive_scene/interactive_screen.rpy", line 4, in execute
+    screen interactive_screen:
+  File "game/interactive_scene/interactive_screen.rpy", line 4, in execute
+    screen interactive_screen:
+  File "game/interactive_scene/interactive_screen.rpy", line 5, in execute
+    add refChar
+NameError: name 'refChar' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 83, in script
+  File "game/interactive_scene/interactive_screen.rpy", line 6, in script
     pause
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ast.py", line 1828, in execute
-    self.call("execute")
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ast.py", line 1816, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/statements.py", line 177, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 416, in execute_pause
-    renpy.pause()
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/exports.py", line 1311, in pause
-    rv = renpy.ui.interact(mouse='pause', type='pause', roll_forward=roll_forward)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/ui.py", line 287, in interact
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\ast.py", line 652, in execute
+    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\exports.py", line 1180, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\character.py", line 1016, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\character.py", line 817, in do_display
+    **display_args)
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\character.py", line 566, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\ui.py", line 287, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 2635, in interact
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\display\core.py", line 2635, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 3019, in interact_core
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\display\core.py", line 3019, in interact_core
     root_widget.visit_all(lambda i : i.per_interact())
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 511, in visit_all
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\display\core.py", line 511, in visit_all
     d.visit_all(callback)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 511, in visit_all
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\display\core.py", line 511, in visit_all
     d.visit_all(callback)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 511, in visit_all
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\display\core.py", line 511, in visit_all
     d.visit_all(callback)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 420, in visit_all
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\display\screen.py", line 420, in visit_all
     callback(self)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 3019, in <lambda>
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\display\core.py", line 3019, in <lambda>
     root_widget.visit_all(lambda i : i.per_interact())
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 430, in per_interact
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\display\screen.py", line 430, in per_interact
     self.update()
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 611, in update
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\display\screen.py", line 611, in update
     self.screen.function(**self.scope)
-  File "game/basic_screen_concepts.rpy", line 3, in execute
-    screen basic_screen:
-  File "game/basic_screen_concepts.rpy", line 3, in execute
-    screen basic_screen:
-  File "game/basic_screen_concepts.rpy", line 5, in execute
-    hbox:
-  File "game/basic_screen_concepts.rpy", line 9, in execute
-    textbutton "Increment variable" :
-  File "game/basic_screen_concepts.rpy", line 9, in keywords
-    textbutton "Increment variable" :
-  File "<screen language>", line 11, in <module>
-TypeError: SetVariable() got an unexpected keyword argument 'hovered'
+  File "game/interactive_scene/interactive_screen.rpy", line 4, in execute
+    screen interactive_screen:
+  File "game/interactive_scene/interactive_screen.rpy", line 4, in execute
+    screen interactive_screen:
+  File "game/interactive_scene/interactive_screen.rpy", line 5, in execute
+    add refChar
+  File "<screen language>", line 5, in <module>
+NameError: name 'refChar' is not defined
 
-Linux-4.13.0-38-generic-x86_64-with-debian-stretch-sid
+Windows-8-6.2.9200
 Ren'Py 6.99.14.3.3347
 RenpyTest 1.0
-Fri Apr 13 18:12:20 2018
+Fri Apr 13 21:38:18 2018

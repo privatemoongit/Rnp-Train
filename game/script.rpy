@@ -9,9 +9,13 @@ label start:
     $ boolean = False
     define total = 0
     scene bg room
-
+    
+    jump interactive_screen_label
+    
     jump prolog_scene
-
+    
+    pause
+    
     label option_one_label:
     "Option two was chosen"
     scene bg background
@@ -70,5 +74,5 @@ label start:
         jump option_tree_label
 
     "Ending incoming after click"
-	
+    
     return
