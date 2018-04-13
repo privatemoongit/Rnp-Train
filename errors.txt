@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/basic_screen_concepts.rpy", line 9: u'style' is not a keyword argument or valid child for the screen statement.
-    style "combo_text"
-         ^
+File "game/basic_screen_concepts.rpy", line 6: Line is indented, but the preceding text statement does not expect a block. Please check this line's indentation.
+    xalign 0.5
+    ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Fri Apr 13 07:49:20 2018
+Fri Apr 13 18:00:43 2018

@@ -79,13 +79,15 @@ label start:
             jump not_to_do_screen_label
 
     label basic_screen_label:
-    show basic_screen
+    show screen basic_screen
     pause
+    hide screen basic_screen
     jump ending
 
     label not_to_do_screen_label:
-    show not_to_do_screen
+    show screen not_to_do_screen
     pause
+    hide screen not_to_do_screen
     jump ending
 
     label option_tree_label:
