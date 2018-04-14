@@ -37,7 +37,7 @@ label option_tree_label:
             jump check_boolean_label
         "Set boolean false":
             $ boolean = False
-            jump check_boolean_label
+            jump check_boolean_label		
 
 label check_boolean_label:
     menu:

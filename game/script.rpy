@@ -1,14 +1,13 @@
 define tm = Character("refChar", color="c8ffc8")
-image bg background = "bg_background.jpg"
-image refChar var_one= "var_one.jpeg"
-image refChar var_two= "var_two.jpg"
+image bg background = "trn_mgs/bg_background.jpg"
+image refChar var_one= "trn_mgs/var_one.jpeg"
+image refChar var_two= "trn_mgs/var_two.jpg"
 
 label start:
 
     default numbers = ["one","two","tree","four","five","six"]
     $ boolean = False
     define total = 0
-    scene bg room
     
     jump interactive_screen_label
     

@@ -1,4 +1,4 @@
-image bg green = "bg_greenscreen.jpg"
+image bg green = "trn_mgs/bg_greenscreen.jpg"
 label interactive_screen_label:
     scene bg green
     pause
