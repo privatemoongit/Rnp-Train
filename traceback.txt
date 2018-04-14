@@ -1,20 +1,70 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/scenes/menu_scenes.rpy", line 50, in script
-    menu:
-TypeError: list indices must be integers, not Null
+  File "game/old_tutorial_tests.rpy", line 50, in script
+    pause
+  File "renpy/common/000statements.rpy", line 416, in execute_pause
+    renpy.pause()
+  File "game/custon_screens.rpy", line 38, in execute
+    screen combo_screen:
+  File "game/custon_screens.rpy", line 38, in execute
+    screen combo_screen:
+  File "game/custon_screens.rpy", line 40, in execute
+    hbox:
+  File "game/custon_screens.rpy", line 52, in execute
+    imagebutton auto "button_%s.png":
+Exception: Imagebutton does not have a idle image. (auto=u'button_%s.png').
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/scenes/menu_scenes.rpy", line 50, in script
-    menu:
-  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\ast.py", line 1534, in execute
-    next_node(self.items[choice][2][0])
-TypeError: list indices must be integers, not Null
+  File "game/old_tutorial_tests.rpy", line 50, in script
+    pause
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\ast.py", line 1828, in execute
+    self.call("execute")
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\ast.py", line 1816, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\statements.py", line 177, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 416, in execute_pause
+    renpy.pause()
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\exports.py", line 1311, in pause
+    rv = renpy.ui.interact(mouse='pause', type='pause', roll_forward=roll_forward)
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\display\core.py", line 2635, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\display\core.py", line 3019, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\display\screen.py", line 420, in visit_all
+    callback(self)
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\display\core.py", line 3019, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\display\screen.py", line 430, in per_interact
+    self.update()
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\display\screen.py", line 611, in update
+    self.screen.function(**self.scope)
+  File "game/custon_screens.rpy", line 38, in execute
+    screen combo_screen:
+  File "game/custon_screens.rpy", line 38, in execute
+    screen combo_screen:
+  File "game/custon_screens.rpy", line 40, in execute
+    hbox:
+  File "game/custon_screens.rpy", line 52, in execute
+    imagebutton auto "button_%s.png":
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\ui.py", line 927, in _imagebutton
+    idle = choice(idle, idle_image, "idle", required=True)
+  File "C:\Users\Kiss\Programming\GameDev\renpy-6.99.13-sdk\renpy\ui.py", line 921, in choice
+    raise Exception("Imagebutton does not have a %s image. (auto=%r)." % (name, auto))
+Exception: Imagebutton does not have a idle image. (auto=u'button_%s.png').
 
 Windows-8-6.2.9200
 Ren'Py 6.99.14.3.3347
 RenpyTest 1.0
-Sat Apr 14 12:44:39 2018
+Sun Apr 15 00:13:57 2018

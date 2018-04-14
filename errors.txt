@@ -2,7 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/interactive_scene/interactive_screen.rpy", line 6: Tab characters are not allowed in Ren'Py scripts.
+The label ending is defined twice, at
+  File "game/scenes/menu_scenes.rpy", line 49 and
+  File "game/script.rpy", line 7.
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Fri Apr 13 21:43:18 2018
+Sun Apr 15 00:08:01 2018
