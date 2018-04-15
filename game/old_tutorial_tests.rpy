@@ -48,6 +48,7 @@ jump ending
 label combo_screen_label:
 show screen combo_screen
 pause
+hide screen combo_screen
 jump ending
 
 label basic_screen_label:

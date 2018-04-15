@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-The label ending is defined twice, at
-  File "game/scenes/menu_scenes.rpy", line 49 and
-  File "game/script.rpy", line 7.
+File "game/map.rpy", line 12: u'Function' is not a keyword argument or valid child for the imagebutton statement.
+    Function(incrementTX)
+            ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Sun Apr 15 00:08:01 2018
+Sun Apr 15 21:26:33 2018

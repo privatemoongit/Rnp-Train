@@ -20,7 +20,7 @@ init python:
             InventoryItem.__init__(self, img, value)
             self.is_equipped = False
             self.equipped_to = None
-        
+
         def equip(self, target):
             self.is_equipped = True
             self.equipped_to = target

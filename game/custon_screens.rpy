@@ -49,5 +49,5 @@ screen combo_screen:
             text "one"
             text "one"
         text "Total: [total]"
-        imagebutton auto "button_%s.png":
+        imagebutton auto "trn_mgs/button_%s.png":
             action [Function(incrementTotal), SelectedIf(total % 2 ==1)]
