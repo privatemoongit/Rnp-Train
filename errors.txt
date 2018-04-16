@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/map.rpy", line 12: u'Function' is not a keyword argument or valid child for the imagebutton statement.
-    Function(incrementTX)
-            ^
+The label vbox_screen_param_label is defined twice, at
+  File "game/map.rpy", line 22 and
+  File "game/old_tutorial_tests.rpy", line 24.
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Sun Apr 15 21:26:33 2018
+Mon Apr 16 07:06:46 2018

@@ -5,7 +5,21 @@ While running game code:
     pause
   File "renpy/common/000statements.rpy", line 416, in execute_pause
     renpy.pause()
-Exception: Grid overfull.
+  File "game/map.rpy", line 3, in execute
+    screen map_screen:
+  File "game/map.rpy", line 3, in execute
+    screen map_screen:
+  File "game/map.rpy", line 5, in execute
+    grid 16 9:
+  File "game/map.rpy", line 7, in execute
+    for j in range (0, 144):
+  File "game/map.rpy", line 8, in execute
+    if j == 14:
+  File "game/map.rpy", line 11, in execute
+    imagebutton auto "interactive_screen_componenets/concil_%s.jpg":
+  File "game/map.rpy", line 11, in keywords
+    imagebutton auto "interactive_screen_componenets/concil_%s.jpg":
+NameError: name 'hbox_screen_param_with_default' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -26,37 +40,40 @@ Full traceback:
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 2635, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 3118, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 2041, in draw_screen
-    renpy.config.screen_height,
-  File "render.pyx", line 485, in renpy.display.render.render_screen
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 717, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 145, in renpy.display.render.render
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 717, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 145, in renpy.display.render.render
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 717, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 145, in renpy.display.render.render
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 661, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 145, in renpy.display.render.render
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 717, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 145, in renpy.display.render.render
-  File "render.pyx", line 233, in renpy.display.render.render
-  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/layout.py", line 429, in render
-    raise Exception("Grid overfull.")
-Exception: Grid overfull.
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 3019, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 420, in visit_all
+    callback(self)
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/core.py", line 3019, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 430, in per_interact
+    self.update()
+  File "/home/gkiss/Misc/renpy-6.99.14.3-sdk/renpy/display/screen.py", line 611, in update
+    self.screen.function(**self.scope)
+  File "game/map.rpy", line 3, in execute
+    screen map_screen:
+  File "game/map.rpy", line 3, in execute
+    screen map_screen:
+  File "game/map.rpy", line 5, in execute
+    grid 16 9:
+  File "game/map.rpy", line 7, in execute
+    for j in range (0, 144):
+  File "game/map.rpy", line 8, in execute
+    if j == 14:
+  File "game/map.rpy", line 11, in execute
+    imagebutton auto "interactive_screen_componenets/concil_%s.jpg":
+  File "game/map.rpy", line 11, in keywords
+    imagebutton auto "interactive_screen_componenets/concil_%s.jpg":
+  File "<screen language>", line 12, in <module>
+NameError: name 'hbox_screen_param_with_default' is not defined
 
 Linux-4.13.0-38-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.14.3.3347
 RenpyTest 1.0
-Sun Apr 15 21:35:48 2018
+Mon Apr 16 07:07:10 2018
