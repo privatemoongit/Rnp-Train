@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 19: Line is indented, but the preceding jump statement statement does not expect a block. Please check this line's indentation.
-    return
-    ^
+File "game/bar.rpy", line 7: u'call' is not a keyword argument or valid child for the screen statement.
+    call screen hbox_screen
+        ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Mon Apr 16 08:32:13 2018
+Mon Apr 16 19:28:16 2018

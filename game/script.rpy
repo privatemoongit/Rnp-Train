@@ -5,15 +5,18 @@
     #pause
     #jump map_label
     #pause
-    #label finito:
 
 # The game starts here.
+
+
+#"This is an imagemap tutorial."
+#jump solar_system
+default a = 0
 label start:
-
-image bg planet_background = "/interactive_screen_componenets/planet_map.jpg"
 scene bg green
-"This is an imagemap tutorial."
-
-jump solar_system
-
+show screen bars
+"Placeholder for end and a pause"
+"Placeholder for end and a pause"
+"Placeholder for end and a pause"
+label finito:
 return

@@ -20,7 +20,7 @@ label mercury:
 
 label venus:
     "It is Venus."
-    jump solar_system
+    jump old_tutorial_label
 
 label earth:
     "It is Earth."
