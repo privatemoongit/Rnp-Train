@@ -9,7 +9,7 @@ screen map_screen:
             textbutton "[x]"
         elif j == 15:
             imagebutton auto "interactive_screen_componenets/concil_%s.jpg":
-                action Function(incrementTX)
+                action Return()
         elif j == 56:
             imagebutton auto "interactive_screen_componenets/printer_%s.jpg":
                 action Null
