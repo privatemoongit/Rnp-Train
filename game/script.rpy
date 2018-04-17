@@ -14,9 +14,11 @@
 default a = 0
 label start:
 scene bg green
-show screen bars
-"Placeholder for end and a pause"
-"Placeholder for end and a pause"
+call screen bars
+"scene finished"
+hide screen bars
+"befor jump"
+jump prolog_scene
 "Placeholder for end and a pause"
 label finito:
 return
