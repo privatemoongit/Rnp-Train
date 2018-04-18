@@ -46,7 +46,7 @@ screen inventory_screen:
     #inventory grid
         grid 10 7:
             yalign 0.2
-            spaceing 5
+            spacing 5
             for item in inventory:
                 frame:
                     style "slot"
@@ -57,7 +57,7 @@ screen inventory_screen:
 
     #item details
     vbox:
-        spaceing 10
+        spacing 10
         label "Current Item" xalign 0.5
 
         if selected_item != None:
@@ -74,7 +74,7 @@ screen inventory_screen:
                 if isinstance(selected_item, Equipable):
                     if selected_item.is_equipped:
                         textbutton "unequip" action Function(selected_item.unequip)
-                    else
+                    else:
                         textbutton "equip" action Function(selected_item.equip, pc)
                 if not isinstance(selected_item, KeyItem):
                     textbutton "Discard" action [RemoveFromSet(inventory, selected_item), SetVariable("selected_item", None)]

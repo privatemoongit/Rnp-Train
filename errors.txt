@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/bar.rpy", line 18: u'jump' is not a keyword argument or valid child for the imagebutton statement.
-    jump map_label
+File "game/inventory_scene/inventory_screen.rpy", line 77: expected ':' not found.
+    else
         ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Tue Apr 17 06:59:24 2018
+Wed Apr 18 08:57:17 2018
