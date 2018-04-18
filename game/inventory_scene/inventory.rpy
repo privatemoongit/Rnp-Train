@@ -14,6 +14,8 @@ init python:
             inventory.remove(self)
             target.addHP(self.hp_gain)
             target.addMP(self.mp_gain)
+            global selected_item
+            selected_item = None
 
     class  Equipable(InventoryItem):
         def __init__(self, img, value):

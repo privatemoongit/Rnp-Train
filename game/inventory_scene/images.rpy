@@ -1,11 +1,11 @@
 image white = "#fff"
 image bg keyitem = "#0ac"
 image sword:
-    "weapon.png"
+    "/rpg_inv/weapon.png"
     size(80,80)
 image meat:
-    "consumable.png"
+    "/rpg_inv/consumable.png"
     size(80,80)
 image armour:
-    "chest.png"
+    "/rpg_inv/chest.png"
     size(80,80)

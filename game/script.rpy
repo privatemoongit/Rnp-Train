@@ -8,17 +8,18 @@
 
 # The game starts here.
 
+#scene bg green
+#call screen bars
+#"scene finished"
+#hide screen bars
+#"befor jump"
+#jump prolog_scene
+#"Placeholder for end and a pause"
 
 #"This is an imagemap tutorial."
 #jump solar_system
 default a = 0
 label start:
-scene bg green
-call screen bars
-"scene finished"
-hide screen bars
-"befor jump"
-jump prolog_scene
-"Placeholder for end and a pause"
+jump ci_label
 label finito:
 return

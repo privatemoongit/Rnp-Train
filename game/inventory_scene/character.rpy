@@ -12,29 +12,29 @@ init python:
             self.weapon = None
             self.armor = {"head": None, "chest": None, "acc": None, "shield": None}
 
-        def addHP(ammount):
+        def addHP(self, ammount):
             self.hp += ammount
             if self.hp > self.max_hp:
                 self.hp = self.max_hp
-        
-        def addMP(ammount):
+
+        def addMP(self, ammount):
             self.mp += ammount
             if self.mp > self.max_mp:
                 self.mp = self.max_mp
 
-        def equip_weapon(weapon):
+        def equip_weapon(self, weapon):
             if self.weapon != None:
                 self.unequip_weapon()
 
             self.weapon = weapon
             self.attack += weapon.attack
 
-        def unequip_weapon(weapon):
+        def unequip_weapon(self, weapon):
             if self.weapon != None:
                 self.attack -= weapon.attack
                 self.weapon = None
 
-        def equip_armour(armour, slot):
+        def equip_armour(self, armour, slot):
             if self.armour[slot] != None:
                 self.unequip_armour(slot)
 
@@ -42,7 +42,7 @@ init python:
             self.defense += armour.defense
             self.mdef += armour.mdef
 
-        def unequip_armour(armour, slot):
+        def unequip_armour(self, armour, slot):
             if self.armour[slot] != None:
                 self.defense -= armour[slot].defense
                 self.mdef -= armour[slot].mdef
